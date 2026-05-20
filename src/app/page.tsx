@@ -39,7 +39,6 @@ export default function HomePage() {
           </a>
           <nav className="hidden gap-6 text-sm text-muted md:flex">
             {[
-              "About",
               "Education",
               "Experience",
               "Projects",
@@ -64,7 +63,7 @@ export default function HomePage() {
         <section className="mx-auto grid max-w-7xl gap-12 px-6 pb-20 pt-16 lg:grid-cols-[1.15fr_0.85fr] lg:px-8 lg:pb-28 lg:pt-24">
           <div>
             <p className="mb-4 inline-flex rounded-full border border-accent/30 bg-accent/10 px-4 py-2 text-sm font-medium text-accentSoft">
-              Available for software, AI, robotics, and mechatronics opportunities
+              Available for software, AI, unity, and mechatronics opportunities
             </p>
             <h1 className="max-w-4xl text-5xl font-semibold leading-tight text-white sm:text-6xl lg:text-7xl">
               {portfolioData.name}
@@ -139,17 +138,6 @@ export default function HomePage() {
               </div>
             </div>
           </aside>
-        </section>
-
-        <section id="about" className="mx-auto max-w-7xl px-6 py-12 lg:px-8">
-          <SectionTitle
-            eyebrow="About"
-            title="Profile"
-            description="A cross-disciplinary foundation in software engineering, AI-enabled systems, AR/VR, and mechatronics, with a focus on building production-ready solutions that bridge code and hardware."
-          />
-          <div className="rounded-3xl border border-line bg-surface/80 p-8">
-            <p className="max-w-4xl text-lg leading-8 text-slate-300">{portfolioData.profile}</p>
-          </div>
         </section>
 
         <section id="education" className="mx-auto max-w-7xl px-6 py-12 lg:px-8">
