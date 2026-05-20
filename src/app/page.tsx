@@ -1,5 +1,4 @@
-import { portfolioData } from "./data";
-import profilePhoto from "./photoCV.png";
+import { portfolioData } from "../data";
 
 type SectionTitleProps = {
   eyebrow: string;
@@ -21,8 +20,9 @@ function SectionTitle({ eyebrow, title, description }: SectionTitleProps) {
   );
 }
 
-function App() {
+export default function HomePage() {
   const { contact } = portfolioData;
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
 
   return (
     <div className="min-h-screen bg-base text-text">
@@ -105,7 +105,7 @@ function App() {
           <aside className="rounded-3xl border border-line bg-surface/90 p-6 shadow-glow">
             <div className="mb-6 overflow-hidden rounded-[1.75rem] border border-line bg-surfaceAlt">
               <img
-                src={profilePhoto}
+                src={`${basePath}/photoCV.png`}
                 alt="Mohamed El Nakouzi"
                 className="h-auto max-h-[520px] w-full object-contain object-center"
               />
@@ -294,7 +294,7 @@ function App() {
           <div className="rounded-[2rem] border border-line bg-gradient-to-br from-surface to-surfaceAlt p-8 shadow-glow sm:p-10">
             <SectionTitle
               eyebrow="Contact"
-              title="Let’s Build Something Impactful"
+              title="Let's Build Something Impactful"
               description="Open to software engineering, AI, robotics, automation, and mechatronics opportunities."
             />
             <div className="flex flex-wrap gap-4">
@@ -333,5 +333,3 @@ function App() {
     </div>
   );
 }
-
-export default App;

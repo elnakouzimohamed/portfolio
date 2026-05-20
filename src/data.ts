@@ -1,4 +1,51 @@
-export const portfolioData = {
+type TimelineItem = {
+  date: string;
+};
+
+type EducationItem = TimelineItem & {
+  degree: string;
+  location: string;
+  details: string[];
+};
+
+type ExperienceItem = TimelineItem & {
+  role: string;
+  company: string;
+  location: string;
+  bullets: string[];
+};
+
+type ProjectItem = TimelineItem & {
+  name: string;
+  bullets: string[];
+  demoUrl?: string;
+  demoLabel?: string;
+};
+
+type SkillGroup = {
+  category: string;
+  items: string[];
+};
+
+export const portfolioData: {
+  name: string;
+  title: string;
+  profile: string;
+  contact: {
+    email: string;
+    phone: string;
+    location: string;
+    github: string;
+    linkedin: string;
+  };
+  education: EducationItem[];
+  experience: ExperienceItem[];
+  projects: ProjectItem[];
+  skills: SkillGroup[];
+  achievements: string[];
+  extracurricular: string[];
+  languages: string[];
+} = {
   name: "Mohamed El Nakouzi",
   title: "Software Engineer | Mechatronics Engineer",
   profile:
@@ -13,7 +60,7 @@ export const portfolioData = {
   education: [
     {
       degree: "B.E. in Mechatronics Engineering, Lebanese American University",
-      date: "Sep 2022 – May 2026",
+      date: "Sep 2022 - May 2026",
       location: "Byblos, Lebanon",
       details: ["Honors Program student with Distinction; CGPA: 3.74."],
     },
@@ -22,7 +69,7 @@ export const portfolioData = {
     {
       role: "AI Software Engineer",
       company: "Globalistic Tech Offshore",
-      date: "March 2025 – May 2026",
+      date: "March 2025 - May 2026",
       location: "Byblos, Lebanon",
       bullets: [
         "Developed and maintained AI-enabled web applications and backend services, integrating intelligent features to automate workflows and improve user experience.",
@@ -32,7 +79,7 @@ export const portfolioData = {
     {
       role: "Unity Developer",
       company: "Globalistic Tech Offshore",
-      date: "May 2025 – Feb 2026",
+      date: "May 2025 - Feb 2026",
       location: "Byblos, Lebanon",
       bullets: [
         "Developed AR/VR Unity applications with interactive user interfaces, real-time asset rendering, and stable 3D experiences.",
@@ -42,7 +89,7 @@ export const portfolioData = {
     {
       role: "Frontend Developer Trainee",
       company: "CreoHub Training Program",
-      date: "Feb 2025 – March 2025",
+      date: "Feb 2025 - March 2025",
       location: "Remote",
       bullets: [
         "Built frontend interfaces using Next.js, HTML, JavaScript, CSS, Tailwind CSS, and Swiper.js.",
@@ -51,7 +98,7 @@ export const portfolioData = {
     {
       role: "Mathematics Tutor",
       company: "Lebanese American University",
-      date: "Sep 2023 – Dec 2023",
+      date: "Sep 2023 - Dec 2023",
       location: "Byblos, Lebanon",
       bullets: [
         "Delivered weekly Calculus III tutoring sessions for sophomore and junior university students.",
@@ -63,7 +110,7 @@ export const portfolioData = {
       name: "T.A.C.T: Tactical Augmented Coaching Translator",
       demoUrl: "https://youtu.be/rNGbi9OeANU?si=NVREzw0GbWTXKD8e",
       demoLabel: "Watch Demo",
-      date: "Sep 2025 – May 2026",
+      date: "Sep 2025 - May 2026",
       bullets: [
         "Developed an AI-powered AR basketball training system that converts tactic-board drawing videos into real-time 3D player animations for clearer coach-player communication.",
         "Implemented AR features such as spatial anchoring, court calibration, and persistent court placement, while integrating Roboflow-based human detection, tracking, action verification, and pose evaluation.",
@@ -71,7 +118,7 @@ export const portfolioData = {
     },
     {
       name: "AURA: Augmented University Real-Time Assistant",
-      date: "Sep 2025 – May 2026",
+      date: "Sep 2025 - May 2026",
       bullets: [
         "Developed an AI-powered university assistant supporting AI Tutor chat, asynchronous lecture generation, and automated assessment generation.",
         "Built agentic AI workflows using LangChain and LangGraph, and deployed the platform using Docker, AWS, and Nginx for production server access.",
@@ -79,7 +126,7 @@ export const portfolioData = {
     },
     {
       name: "SAM Libraries: Internet-Based Book Store",
-      date: "Sep 2024 – Dec 2024",
+      date: "Sep 2024 - Dec 2024",
       bullets: [
         "Developed an online bookstore using Angular, FastAPI, and MySQL, allowing users to borrow or purchase books with category filtering and admin book management.",
         "Integrated Gemini-powered AI assistance, book image previews, and librarian service booking.",
@@ -87,7 +134,7 @@ export const portfolioData = {
     },
     {
       name: "Real-Time Gesture Prediction",
-      date: "Jan 2025 – May 2025",
+      date: "Jan 2025 - May 2025",
       bullets: [
         "Developed a real-time hand gesture classification system using EMG signals and machine learning for human-computer interaction.",
       ],
@@ -96,7 +143,7 @@ export const portfolioData = {
       name: "B-Bot: Self-Balancing Robot with Fuzzy Control and Neural Networks",
       demoUrl: "https://youtu.be/OxzO8reckg4?si=h26SasTzShWoitak",
       demoLabel: "Watch Demo",
-      date: "Jan 2025 – May 2025",
+      date: "Jan 2025 - May 2025",
       bullets: [
         "Designed a self-balancing two-wheeled robot integrating fuzzy logic control and neural networks for adaptive stability and motion.",
         "Used Raspberry Pi for real-time processing, an IMU for balance correction, and a camera for machine learning applications.",
