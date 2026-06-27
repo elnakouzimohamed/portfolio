@@ -1,4 +1,4 @@
-const basePath = "/portfoilo";
+const basePath = "/portfolio";
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
