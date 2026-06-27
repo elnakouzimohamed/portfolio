@@ -102,11 +102,11 @@ export default function HomePage() {
           </div>
 
           <aside className="rounded-3xl border border-line bg-surface/90 p-6 shadow-glow">
-            <div className="mb-6 overflow-hidden rounded-[1.75rem] border border-line bg-surfaceAlt">
+            <div className="mx-auto mb-6 aspect-square max-w-[420px] overflow-hidden rounded-full border border-line bg-surfaceAlt">
               <img
-                src={`${basePath}/photoCV.png`}
+                src={`${basePath}/newprofilepicture.jpeg`}
                 alt="Mohamed El Nakouzi"
-                className="h-auto max-h-[520px] w-full object-contain object-center"
+                className="h-full w-full object-cover object-center"
               />
             </div>
             <div className="space-y-5">
@@ -321,3 +321,4 @@ export default function HomePage() {
     </div>
   );
 }
+
